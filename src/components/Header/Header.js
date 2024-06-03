@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header">
-      <div className="headferLeft">
+      <div className="headerLeft">
         <Link to="/">
           <img
-            className="header_icon"
+            className="header__icon"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png"
             alt="imdb logo"
           ></img>
