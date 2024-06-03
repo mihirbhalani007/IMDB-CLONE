@@ -10,6 +10,7 @@ function App() {
     <>
       <div className="App">
         <Router>
+          <Header />
           <Routes>
             <Route index element={<h1>Hello world</h1>}></Route>
             <Route
