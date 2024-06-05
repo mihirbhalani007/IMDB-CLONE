@@ -27,9 +27,11 @@ function Home() {
         <Carousel
           showThumbs={false}
           autoPlay={true}
-          transitionTime={3}
+          autoFocus={true}
+          transitionTime={0}
           infiniteLoop={true}
           showStatus={false}
+          interval={2000}
         >
           {popularMovies.map((movie) => (
             <Link
@@ -43,22 +45,21 @@ function Home() {
                   alt="Poster Img"
                 />
               </div>
-              <div className="posterImage__Overlay">
+              <div className="posterImage__overlay">
                 <div className="posterImage__title">
                   {movie ? movie.original_title : ""}
                 </div>
                 <div className="posterImage__runtime">
                   {movie ? movie.release_date : ""}
                   <span className="posterImage__rating">
-                    {movie ? movie.vote_average : ""}
-                    <span>
-                      <i className="fas fa-star" />
-                    </span>
+                    {movie ? movie.vote_average.toFixed(1) : ""}
+
+                    <i className="fas fa-star" style={{ color: "yellow" }} />
                   </span>
                 </div>
-              </div>
-              <div className="posterImage__description">
-                {movie ? movie.overview : ""}
+                <div className="posterImage__description">
+                  {movie ? movie.overview : ""}
+                </div>
               </div>
             </Link>
           ))}

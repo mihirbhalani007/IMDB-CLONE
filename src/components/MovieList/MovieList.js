@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 function Movielist() {
-  return (
-    <div>
-      
-    </div>
-  )
+  const [movieList, setMovieList] = useState([]);
+  const { type } = useParams();
+
+  const getData = () => {};
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  useEffect(() => {
+    getData();
+  }, [type]);
+
+  return <></>;
 }
 
-export default Movielist
+export default Movielist;
