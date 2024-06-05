@@ -12,6 +12,8 @@ const Card = ({ movie }) => {
     }, 1500);
   }, []);
 
+  console.log("is Loading : ",isLoding);
+
   return (
     <>
       {isLoding ? (
@@ -27,20 +29,20 @@ const Card = ({ movie }) => {
         >
           <div className="cards">
             <img
-              className="cards__img"
+              className="card__img"
               src={`https://image.tmdb.org/t/p/original${
                 movie ? movie.poster_path : ""
               }`}
               alt="movie poster"
             />
-            <div className="cards__overlay">
+            <div className="card__overlay">
               <div className="card__title">
                 {movie ? movie.original_title : ""}
               </div>
               <div className="card__runtime">
                 {movie ? movie.release_date : ""}
                 <span className="card__rating">
-                  {movie ? movie.vote_average : ""}
+                  {movie ? movie.vote_average.toFixed(1) : ""}
                   <i className="fas fa-star" />
                 </span>
               </div>
@@ -54,3 +56,5 @@ const Card = ({ movie }) => {
     </>
   );
 };
+
+export default Card;
