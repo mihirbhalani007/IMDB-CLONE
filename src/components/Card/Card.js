@@ -9,9 +9,8 @@ const Card = ({ movie }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoding(false);
-    }, 1500);
+    });
   }, []);
-
 
   return (
     <>
@@ -23,7 +22,7 @@ const Card = ({ movie }) => {
         </div>
       ) : (
         <Link
-          to={`/movies/${movie.id}`}
+          to={`/movie/${movie.id}`}
           style={{ textDecoration: "none", color: "white" }}
         >
           <div className="cards">
