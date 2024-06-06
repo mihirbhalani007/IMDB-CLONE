@@ -32,7 +32,7 @@ function Home() {
           transitionTime={0}
           infiniteLoop={true}
           showStatus={false}
-          interval={2000}
+          interval={3000}
         >
           {popularMovies.map((movie) => (
             <Link
