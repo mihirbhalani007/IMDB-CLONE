@@ -20,8 +20,6 @@ function Home() {
     fetchPopularMovies();
   }, []);
 
-
-
   return (
     <>
       <div className="poster">
@@ -32,7 +30,7 @@ function Home() {
           transitionTime={0}
           infiniteLoop={true}
           showStatus={false}
-          interval={3000}
+          interval={1500}
         >
           {popularMovies.map((movie) => (
             <Link
@@ -65,7 +63,7 @@ function Home() {
             </Link>
           ))}
         </Carousel>
-        <Movielist/>
+        <Movielist />
       </div>
     </>
   );
