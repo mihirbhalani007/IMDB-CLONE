@@ -20,7 +20,7 @@ function Home() {
     fetchPopularMovies();
   }, []);
 
-  console.log(popularMovies);
+
 
   return (
     <>

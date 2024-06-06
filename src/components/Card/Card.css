@@ -49,16 +49,26 @@
 }
 
 .card__runtime {
+  display: flex;
+  justify-content: space-between;
+
   font-size: 0.75rem;
   margin-bottom: 0.25rem;
 }
 
 .card__rating {
-  float: right;
+  display: flex;
+  
 }
 
 .card__description {
+  display: flex;
+  
   font-style: italic;
   font-size: 0.75rem;
   margin-bottom: 0.25rem;
+}
+
+.star {
+  margin-left: 2px;
 }

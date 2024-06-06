@@ -12,7 +12,6 @@ const Card = ({ movie }) => {
     }, 1500);
   }, []);
 
-  console.log("is Loading : ",isLoding);
 
   return (
     <>
@@ -43,7 +42,9 @@ const Card = ({ movie }) => {
                 {movie ? movie.release_date : ""}
                 <span className="card__rating">
                   {movie ? movie.vote_average.toFixed(1) : ""}
-                  <i className="fas fa-star" />
+                  <div className="star">
+                    <i className="fas fa-star" style={{ color: "yellow" }} />
+                  </div>
                 </span>
               </div>
               <div className="card__description">

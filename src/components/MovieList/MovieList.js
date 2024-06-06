@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Card from "../Card/Card";
+import "./MovieList.css";
 
-function Movielist() {
+function MovieList() {
   const [movieList, setMovieList] = useState([]);
   const { type } = useParams();
 
@@ -13,9 +14,9 @@ function Movielist() {
         type ? type : "popular"
       }?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`
     );
+
     setMovieList(Data.data.results);
   };
-  console.log("Movie list:  ", movieList);
   useEffect(() => {
     getData();
   }, []);
@@ -36,4 +37,4 @@ function Movielist() {
   );
 }
 
-export default Movielist;
+export default MovieList;
