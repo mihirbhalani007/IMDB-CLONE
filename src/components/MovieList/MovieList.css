@@ -18,3 +18,18 @@ h2.list__title {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+
+/* .controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.controls input,
+.controls select {
+  padding: 10px;
+  margin: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+} */
