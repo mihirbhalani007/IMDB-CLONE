@@ -11,6 +11,8 @@ h2.list__title {
   margin-left: 7rem;
   color: white;
   text-align: left;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .list__cards {

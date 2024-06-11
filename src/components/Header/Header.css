@@ -17,10 +17,11 @@ a > span {
   font-size: 1.3rem;
   cursor: pointer;
   color: white;
+  transition: color 0.75s;
 }
 
 a > span:hover {
-  color: red;
+  color: rgb(255, 0, 0);
 }
 
 .header__icon {
