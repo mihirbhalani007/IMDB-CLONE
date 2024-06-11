@@ -49,6 +49,18 @@ const Card = ({ movie }) => {
               <div className="card__description">
                 {movie ? movie.overview.slice(0, 118) + "..." : ""}
               </div>
+              {/* <button
+                className="bg-pink-300 text-white active:bg-pink-500 hover:bg-pink-500 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 w-3/12"
+                type="button"
+              >
+                <i class="fas fa-heart"></i>
+              </button> */}
+              <button
+                className="heart-button relative bg-transparent text-pink-500 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 w-3/12"
+                type="button"
+              >
+                <i className="fas fa-heart heart-icon"></i>
+              </button>
             </div>
           </div>
         </Link>

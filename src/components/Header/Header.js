@@ -23,6 +23,9 @@ const Header = () => {
         <Link to="/movies/upcoming" style={{ textDecoration: "none" }}>
           <span>Upcoming</span>
         </Link>
+        <Link to="/Wishlist" style={{ textDecoration: "none" }}>
+          <span>Wishlist</span>
+        </Link>
       </div>
     </div>
   );

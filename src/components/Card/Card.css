@@ -58,12 +58,11 @@
 
 .card__rating {
   display: flex;
-  
 }
 
 .card__description {
   display: flex;
-  
+
   font-style: italic;
   font-size: 0.75rem;
   margin-bottom: 0.25rem;
@@ -71,4 +70,18 @@
 
 .star {
   margin-left: 2px;
+}
+
+.heart-icon {
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.heart-button:hover .heart-icon {
+  transform: scale(1.2);
+  background-color: rgb(230, 67, 94);
+  color: white; /* Ensure the heart icon stays visible on pink background */
+  border: none; /* Remove border when filled with pink */
 }
