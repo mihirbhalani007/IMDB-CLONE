@@ -11,8 +11,6 @@ function MovieList() {
   const [filterOption, setFilterOption] = useState("");
   const { type } = useParams();
 
-  // console.log("Movie List: ", movieList)
-
   const handleSort = (e) => {
     setSortOption(e.target.value);
   };
