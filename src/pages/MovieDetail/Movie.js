@@ -79,7 +79,7 @@ const Movie = () => {
                       <span
                         className="movie__genre"
                         id={genre.id}
-                        key={genre.id}
+                        key={Math.random}
                       >
                         {genre.name}
                       </span>
@@ -132,7 +132,7 @@ const Movie = () => {
           currentMovieDetail.production_companies.map((company) => (
             <>
               {company.logo_path && (
-                <span className="productionCompanyImage">
+                <span className="productionCompanyImage" key={Math.random()}>
                   <img
                     className="movie__productionComapany"
                     src={
