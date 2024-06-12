@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { MovieContext } from "../../App";
+import "./Wishlist.css";
 
 function Wishlist() {
-  return (
-    <div>
-      <h1>This is wishlist Page.</h1>
+  const { whishlistMovie } = useContext(MovieContext);
+  return whishlistMovie.map((movie) => (
+    <div
+      className="wishlist-container"
+      style={{ color: "white", fontSize: "20px", fontWeight: "bold" }}
+    >
+      {movie}
     </div>
-  )
+  ));
 }
 
-export default Wishlist
+export default Wishlist;

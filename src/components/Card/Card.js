@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "./Card.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { MovieContext } from "../../App";
 
 const Card = ({ movie }) => {
+  const { addToWishlist } = useContext(MovieContext);
   const [isLoding, setIsLoding] = useState(true);
   const [isClicked, setIsClicked] = useState(false);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -15,10 +18,10 @@ const Card = ({ movie }) => {
   }, []);
 
   const handleClick = (e) => {
+    addToWishlist(movie.id);
     e.stopPropagation();
     setIsClicked(true);
-     setTimeout(() => setIsClicked(false), 600);
-    console.log("watchlist button clicked");
+    setTimeout(() => setIsClicked(false), 600);
   };
 
   const handleCardClick = () => {
@@ -61,12 +64,6 @@ const Card = ({ movie }) => {
             <div className="card__description">
               {movie ? movie.overview.slice(0, 118) + "..." : ""}
             </div>
-            {/* <button
-                className="bg-pink-300 text-white active:bg-pink-500 hover:bg-pink-500 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 w-3/12"
-                type="button"
-              >
-                <i class="fas fa-heart"></i>
-              </button> */}
             <button
               className={`heart-button relative bg-transparent text-pink-500 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 w-3/12 ${
                 isClicked ? "clicked" : ""
