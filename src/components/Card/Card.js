@@ -18,7 +18,7 @@ const Card = ({ movie }) => {
   }, []);
 
   const handleClick = (e) => {
-    addToWishlist(movie.id);
+    addToWishlist(movie);
     e.stopPropagation();
     setIsClicked(true);
     setTimeout(() => setIsClicked(false), 600);

@@ -12,9 +12,15 @@ export const MovieContext = React.createContext();
 function App() {
   const [whishlistMovie, setWishlistMovie] = useState([]);
 
-  const addToWishlist = (movieId) => {
-    setWishlistMovie((prevMovies) => [...prevMovies, movieId]);
-    console.log(whishlistMovie);
+  const addToWishlist = (movie) => {
+    setWishlistMovie((prevMovies) => {
+      // Check if the movie is already in the wishlist
+      if (prevMovies.some((m) => m.id === movie.id)) {
+        return prevMovies;
+      }
+      // Add movie to wishlist if not already present
+      return [...prevMovies, movie];
+    });
   };
 
   return (
