@@ -29,10 +29,10 @@ function App() {
 
   const addToWishlist = (movie) => {
     setWishlistMovie((prevMovies) => {
-      if (prevMovies.some((m) => m.id === movie.id)) {
+      if (wishlistMovie.some((m) => m.id === movie.id)) {
         return prevMovies;
       }
-      return [...prevMovies, movie];
+      return  [...prevMovies, movie];
     });
 
     axios
