@@ -52,7 +52,6 @@ function Home() {
                   {movie ? movie.release_date : ""}
                   <span className="posterImage__rating">
                     {movie ? movie.vote_average.toFixed(1) : ""}
-
                     <i className="fas fa-star" style={{ color: "yellow" }} />
                   </span>
                 </div>

@@ -112,7 +112,6 @@ function MovieList() {
           <option value="14">Fantasy</option>
         </select>
       </div>
-
       <h2 className="list__title">{(type ? type : "POPULAR").toUpperCase()}</h2>
       <div className="list__cards">
         {filteredAndSortedMovies.length > 0 ? (
