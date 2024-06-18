@@ -1,10 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { MovieContext } from "../../App";
 import "./Wishlist.css";
 import axios from "axios";
 
 function Wishlist() {
-  const { wishlistMovie, deleteFromWishlist, savedMovie, setSavedMovie } = useContext(MovieContext);
+  const { deleteFromWishlist, savedMovie, setSavedMovie } =
+    useContext(MovieContext);
 
   useEffect(() => {
     fetchMovies();
@@ -20,7 +21,7 @@ function Wishlist() {
     }
   };
 
-  const handleClick = (id) => {
+  const handleClick = async (id) => {
     deleteFromWishlist(id);
   };
 

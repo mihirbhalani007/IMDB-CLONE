@@ -29,15 +29,22 @@ function App() {
     });
 
   const addToWishlist = (movie) => {
+    // Convert the id to a string
+    const movieWithStringId = { ...movie, id: String(movie.id) };
+
+    console.log("Adding movie to wishlist:", movieWithStringId); // Debug statement
+
+    // Update the state
     setSavedMovie((prevMovies) => {
-      if (savedMovie.some((m) => m.id === movie.id)) {
+      if (savedMovie.some((m) => m.id === movieWithStringId.id)) {
         return prevMovies;
       }
-      return [...prevMovies, movie];
+      return [...prevMovies, movieWithStringId];
     });
 
+    // Send the POST request
     axios
-      .post("http://localhost:3001/wishlist", movie)
+      .post("http://localhost:3001/wishlist", movieWithStringId)
       .then(() => {
         notify();
       })
@@ -48,7 +55,7 @@ function App() {
 
   const deleteFromWishlist = async (id) => {
     try {
-      // await axios.delete(`http://localhost:3001/wishlist/${id}`);
+      await axios.delete(`http://localhost:3001/wishlist/${id}`);
       // Update state to remove the deleted movie
       setSavedMovie(savedMovie.filter((movie) => movie.id !== id));
     } catch (error) {
