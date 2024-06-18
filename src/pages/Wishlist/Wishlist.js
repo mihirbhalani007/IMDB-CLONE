@@ -38,12 +38,12 @@ function Wishlist() {
                 </div>
               </span>
             </div>
-            <div
+            {/* <div
               className="card__description"
               style={{ color: "white", fontSize: "16px", fontWeight: "bold" }}
             >
               {movie.overview ? movie.overview.slice(0, 118) + "..." : "N/A"}
-            </div>
+            </div> */}
           </div>
         </div>
       ))}

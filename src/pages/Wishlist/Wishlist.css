@@ -59,7 +59,7 @@ h2.list__title {
 .card__runtime {
   display: flex;
   justify-content: space-between;
-color: white;
+  color: white;
   font-size: 0.75rem;
   margin-bottom: 0.25rem;
 }
