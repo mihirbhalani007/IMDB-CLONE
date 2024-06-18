@@ -1,82 +1,68 @@
 {
   "wishlist": [
     {
-      "id": 929590,
+      "id": 150540,
       "adult": false,
-      "backdrop_path": "/z121dSTR7PY9KxKuvwiIFSYW8cf.jpg",
-      "genre_ids": [
-        10752,
-        28,
-        18
-      ],
+      "backdrop_path": "/j29ekbcLpBvxnGk6LjdTc2EI5SA.jpg",
+      "genre_ids": [16, 10751, 12, 18, 35],
       "original_language": "en",
-      "original_title": "Civil War",
-      "overview": "In the near future, a group of war journalists attempt to survive while reporting the truth as the United States stands on the brink of civil war.",
-      "popularity": 1569.076,
-      "poster_path": "/sh7Rg8Er3tFcN9BpKIPOMvALgZd.jpg",
-      "release_date": "2024-04-10",
-      "title": "Civil War",
+      "original_title": "Inside Out",
+      "overview": "From an adventurous balloon ride above the clouds to a monster-filled metropolis, Academy Award®-winning director Pete Docter (“Monsters, Inc.,” “Up”) has taken audiences to unique and imaginative places. In Disney and Pixar’s original movie “ Inside Out,” he will take us to the most extraordinary location of all—inside the mind.",
+      "popularity": 2731.637,
+      "poster_path": "/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg",
+      "release_date": "2015-06-17",
+      "title": "Inside Out",
       "video": false,
-      "vote_average": 7.01,
-      "vote_count": 1476
+      "vote_average": 7.916,
+      "vote_count": 20583
+    },
+    {
+      "id": 719221,
+      "adult": false,
+      "backdrop_path": "/oavbmL3iddJUmC8nQjL6bLHwAP4.jpg",
+      "genre_ids": [27],
+      "original_language": "en",
+      "original_title": "Tarot",
+      "overview": "When a group of friends recklessly violate the sacred rule of Tarot readings, they unknowingly unleash an unspeakable evil trapped within the cursed cards. One by one, they come face to face with fate and end up in a race against death.",
+      "popularity": 1099.786,
+      "poster_path": "/gAEUXC37vl1SnM7PXsHTF23I2vq.jpg",
+      "release_date": "2024-05-01",
+      "title": "Tarot",
+      "video": false,
+      "vote_average": 6.496,
+      "vote_count": 504
     },
     {
       "id": 746036,
       "adult": false,
       "backdrop_path": "/H5HjE7Xb9N09rbWn1zBfxgI8uz.jpg",
-      "genre_ids": [
-        28,
-        35
-      ],
+      "genre_ids": [28, 35],
       "original_language": "en",
       "original_title": "The Fall Guy",
       "overview": "Fresh off an almost career-ending accident, stuntman Colt Seavers has to track down a missing movie star, solve a conspiracy and try to win back the love of his life while still doing his day job.",
-      "popularity": 880.671,
+      "popularity": 895.517,
       "poster_path": "/aBkqu7EddWK7qmY4grL4I6edx2h.jpg",
       "release_date": "2024-04-24",
       "title": "The Fall Guy",
       "video": false,
-      "vote_average": 7.286,
-      "vote_count": 1175
+      "vote_average": 7.254,
+      "vote_count": 1268
     },
     {
-      "id": 1001311,
+      "id": 786892,
       "adult": false,
-      "backdrop_path": "/hliXekHv7xc2cgXnMBLlp4Eihq8.jpg",
-      "genre_ids": [
-        53,
-        27,
-        28,
-        9648
-      ],
-      "original_language": "fr",
-      "original_title": "Sous la Seine",
-      "overview": "In the Summer of 2024, Paris is hosting the World Triathlon Championships on the Seine for the first time. Sophia, a brilliant scientist, learns from Mika, a young environmental activist, that a large shark is swimming deep in the river. To avoid a bloodbath at the heart of the city, they have no choice but to join forces with Adil, the Seine river police commander.",
-      "popularity": 2822.686,
-      "poster_path": "/qZPLK5ktRKa3CL4sKRZtj8UlPYc.jpg",
-      "release_date": "2024-06-05",
-      "title": "Under Paris",
-      "video": false,
-      "vote_average": 5.82,
-      "vote_count": 520
-    },
-    {
-      "id": 1136318,
-      "adult": false,
-      "backdrop_path": "/11G6N5zW0KykVS0EcNKeXHUmQj8.jpg",
-      "genre_ids": [
-        10752
-      ],
+      "backdrop_path": "/xchNb8dvc8jQnPScwirwqUjIsn3.jpg",
+      "genre_ids": [28, 12, 878],
       "original_language": "en",
-      "original_title": "Battle Over Britain",
-      "overview": "A young pilot, fresh out of training, is called to join a Flight while they wait for the call to scramble. Throughout a single day, he witnesses the skies of southern England filled with deadly dog fights, and after every exhausting battle the men return to their dispersal hut, only to find another of their number missing. Unwilling to surrender, the pilot and his comrades unite to take to the skies once more, determined to defend not only the airfield, but their entire country.",
-      "popularity": 799.489,
-      "poster_path": "/8htJ7keZTwa08aC9OKyiqaq1cNJ.jpg",
-      "release_date": "2023-12-01",
-      "title": "Battle Over Britain",
+      "original_title": "Furiosa: A Mad Max Saga",
+      "overview": "As the world fell, young Furiosa is snatched from the Green Place of Many Mothers and falls into the hands of a great Biker Horde led by the Warlord Dementus. Sweeping through the Wasteland they come across the Citadel presided over by The Immortan Joe. While the two Tyrants war for dominance, Furiosa must survive many trials as she puts together the means to find her way home.",
+      "popularity": 757.234,
+      "poster_path": "/iADOJ8Zymht2JPMoy3R7xceZprc.jpg",
+      "release_date": "2024-05-22",
+      "title": "Furiosa: A Mad Max Saga",
       "video": false,
-      "vote_average": 6.517,
-      "vote_count": 30
+      "vote_average": 7.631,
+      "vote_count": 913
     }
   ]
 }

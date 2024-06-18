@@ -4,12 +4,11 @@ import "./Wishlist.css";
 import axios from "axios";
 
 function Wishlist() {
-  const { wishlistMovie } = useContext(MovieContext);
-  const [savedMovie, setSavedMovie] = useState([]);
+  const { wishlistMovie, deleteFromWishlist, savedMovie, setSavedMovie } = useContext(MovieContext);
 
   useEffect(() => {
     fetchMovies();
-  }, [wishlistMovie]);
+  }, []);
 
   const fetchMovies = async () => {
     try {
@@ -21,16 +20,9 @@ function Wishlist() {
     }
   };
 
-  const handleClick = async (id) => {
-     try {
-      // await axios.delete(`http://localhost:3001/wishlist/${id}`);
-      // Update state to remove the deleted movie
-      setSavedMovie(savedMovie.filter(movie => movie.id !== id));
-    } catch (error) {
-      console.error("Error deleting movie:", error);
-    }
+  const handleClick = (id) => {
+    deleteFromWishlist(id);
   };
-
 
   return (
     <div className="wishlist-container">

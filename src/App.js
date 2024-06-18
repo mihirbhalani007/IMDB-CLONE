@@ -13,7 +13,8 @@ import axios from "axios";
 export const MovieContext = React.createContext();
 
 function App() {
-  const [wishlistMovie, setWishlistMovie] = useState([]);
+  // const [wishlistMovie, setWishlistMovie] = useState([]);
+  const [savedMovie, setSavedMovie] = useState([]);
 
   const notify = () =>
     toast.success("Movie Successfully added!!", {
@@ -28,11 +29,11 @@ function App() {
     });
 
   const addToWishlist = (movie) => {
-    setWishlistMovie((prevMovies) => {
-      if (wishlistMovie.some((m) => m.id === movie.id)) {
+    setSavedMovie((prevMovies) => {
+      if (savedMovie.some((m) => m.id === movie.id)) {
         return prevMovies;
       }
-      return  [...prevMovies, movie];
+      return [...prevMovies, movie];
     });
 
     axios
@@ -45,12 +46,29 @@ function App() {
       });
   };
 
+  const deleteFromWishlist = async (id) => {
+    try {
+      // await axios.delete(`http://localhost:3001/wishlist/${id}`);
+      // Update state to remove the deleted movie
+      setSavedMovie(savedMovie.filter((movie) => movie.id !== id));
+    } catch (error) {
+      console.error("Error deleting movie:", error);
+    }
+  };
+
   return (
     <>
       <div className="App">
         <Router>
           <Header />
-          <MovieContext.Provider value={{ wishlistMovie, addToWishlist }}>
+          <MovieContext.Provider
+            value={{
+              addToWishlist,
+              deleteFromWishlist,
+              savedMovie,
+              setSavedMovie,
+            }}
+          >
             <Routes>
               <Route index element={<Home />} />
               <Route path="movie/:id" element={<Movie />} />
