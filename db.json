@@ -1,3 +1,205 @@
 {
-  "wishlist": []
+  "wishlist": [
+    {
+      "id": "1001311",
+      "adult": false,
+      "backdrop_path": "/hliXekHv7xc2cgXnMBLlp4Eihq8.jpg",
+      "genre_ids": [
+        53,
+        27,
+        28,
+        9648
+      ],
+      "original_language": "fr",
+      "original_title": "Sous la Seine",
+      "overview": "In the Summer of 2024, Paris is hosting the World Triathlon Championships on the Seine for the first time. Sophia, a brilliant scientist, learns from Mika, a young environmental activist, that a large shark is swimming deep in the river. To avoid a bloodbath at the heart of the city, they have no choice but to join forces with Adil, the Seine river police commander.",
+      "popularity": 2822.686,
+      "poster_path": "/qZPLK5ktRKa3CL4sKRZtj8UlPYc.jpg",
+      "release_date": "2024-06-05",
+      "title": "Under Paris",
+      "video": false,
+      "vote_average": 5.818,
+      "vote_count": 528
+    },
+    {
+      "id": "573435",
+      "adult": false,
+      "backdrop_path": "/gRApXuxWmO2forYTuTmcz5RaNUV.jpg",
+      "genre_ids": [
+        28,
+        80,
+        53,
+        35
+      ],
+      "original_language": "en",
+      "original_title": "Bad Boys: Ride or Die",
+      "overview": "After their late former Captain is framed, Lowrey and Burnett try to clear his name, only to end up on the run themselves.",
+      "popularity": 2744.583,
+      "poster_path": "/nP6RliHjxsz4irTKsxe8FRhKZYl.jpg",
+      "release_date": "2024-06-05",
+      "title": "Bad Boys: Ride or Die",
+      "video": false,
+      "vote_average": 7.062,
+      "vote_count": 305
+    },
+    {
+      "id": "150540",
+      "adult": false,
+      "backdrop_path": "/j29ekbcLpBvxnGk6LjdTc2EI5SA.jpg",
+      "genre_ids": [
+        16,
+        10751,
+        12,
+        18,
+        35
+      ],
+      "original_language": "en",
+      "original_title": "Inside Out",
+      "overview": "From an adventurous balloon ride above the clouds to a monster-filled metropolis, Academy Award®-winning director Pete Docter (“Monsters, Inc.,” “Up”) has taken audiences to unique and imaginative places. In Disney and Pixar’s original movie “ Inside Out,” he will take us to the most extraordinary location of all—inside the mind.",
+      "popularity": 2731.637,
+      "poster_path": "/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg",
+      "release_date": "2015-06-17",
+      "title": "Inside Out",
+      "video": false,
+      "vote_average": 7.916,
+      "vote_count": 20592
+    },
+    {
+      "id": "1001311",
+      "adult": false,
+      "backdrop_path": "/hliXekHv7xc2cgXnMBLlp4Eihq8.jpg",
+      "genre_ids": [
+        53,
+        27,
+        28,
+        9648
+      ],
+      "original_language": "fr",
+      "original_title": "Sous la Seine",
+      "overview": "In the Summer of 2024, Paris is hosting the World Triathlon Championships on the Seine for the first time. Sophia, a brilliant scientist, learns from Mika, a young environmental activist, that a large shark is swimming deep in the river. To avoid a bloodbath at the heart of the city, they have no choice but to join forces with Adil, the Seine river police commander.",
+      "popularity": 2822.686,
+      "poster_path": "/qZPLK5ktRKa3CL4sKRZtj8UlPYc.jpg",
+      "release_date": "2024-06-05",
+      "title": "Under Paris",
+      "video": false,
+      "vote_average": 5.818,
+      "vote_count": 528
+    },
+    {
+      "id": "1115623",
+      "adult": false,
+      "backdrop_path": "/9Or1qeUZyOSQVglRXGnqc6owp21.jpg",
+      "genre_ids": [
+        28
+      ],
+      "original_language": "en",
+      "original_title": "The Last Kumite",
+      "overview": "When Karate champion Michael Rivers wins the last tournament of his career, shady businessman Ron Hall offers him the opportunity to fight in an illegal Kumite in Bulgaria against the world’s best martial artists.  When Michael declines, Hall has his daughter kidnapped and, in order to rescue her, Rivers is left with no choice but to compete in the deadly tournament. Arriving in Bulgaria, he finds out that he is not the only fighter whose loved one was taken. Rivers enlists the help of trainers Master Loren, and Julie Jackson but will it be enough for him to win the tournament and save his daughter’s life?",
+      "popularity": 1246.18,
+      "poster_path": "/zDkaJgsPoSqa2cMe2hW2HAfyWwO.jpg",
+      "release_date": "2024-05-09",
+      "title": "The Last Kumite",
+      "video": false,
+      "vote_average": 5.467,
+      "vote_count": 15
+    },
+    {
+      "id": "38700",
+      "adult": false,
+      "backdrop_path": "/eAIHqfS3kXm7kZl4j7ZBfdegyEz.jpg",
+      "genre_ids": [
+        53,
+        28,
+        80
+      ],
+      "original_language": "en",
+      "original_title": "Bad Boys for Life",
+      "overview": "Marcus and Mike are forced to confront new threats, career changes, and midlife crises as they join the newly created elite team AMMO of the Miami police department to take down the ruthless Armando Armas, the vicious leader of a Miami drug cartel.",
+      "popularity": 835.489,
+      "poster_path": "/y95lQLnuNKdPAzw9F9Ab8kJ80c3.jpg",
+      "release_date": "2020-01-15",
+      "title": "Bad Boys for Life",
+      "video": false,
+      "vote_average": 7.125,
+      "vote_count": 7905
+    },
+    {
+      "id": "1136318",
+      "adult": false,
+      "backdrop_path": "/11G6N5zW0KykVS0EcNKeXHUmQj8.jpg",
+      "genre_ids": [
+        10752
+      ],
+      "original_language": "en",
+      "original_title": "Battle Over Britain",
+      "overview": "A young pilot, fresh out of training, is called to join a Flight while they wait for the call to scramble. Throughout a single day, he witnesses the skies of southern England filled with deadly dog fights, and after every exhausting battle the men return to their dispersal hut, only to find another of their number missing. Unwilling to surrender, the pilot and his comrades unite to take to the skies once more, determined to defend not only the airfield, but their entire country.",
+      "popularity": 799.489,
+      "poster_path": "/8htJ7keZTwa08aC9OKyiqaq1cNJ.jpg",
+      "release_date": "2023-12-01",
+      "title": "Battle Over Britain",
+      "video": false,
+      "vote_average": 6.597,
+      "vote_count": 31
+    },
+    {
+      "id": "786892",
+      "adult": false,
+      "backdrop_path": "/raph7qjAGTMXaIjVxt6ZDSXRzUr.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "original_language": "en",
+      "original_title": "Furiosa: A Mad Max Saga",
+      "overview": "As the world fell, young Furiosa is snatched from the Green Place of Many Mothers and falls into the hands of a great Biker Horde led by the Warlord Dementus. Sweeping through the Wasteland they come across the Citadel presided over by The Immortan Joe. While the two Tyrants war for dominance, Furiosa must survive many trials as she puts together the means to find her way home.",
+      "popularity": 757.234,
+      "poster_path": "/iADOJ8Zymht2JPMoy3R7xceZprc.jpg",
+      "release_date": "2024-05-22",
+      "title": "Furiosa: A Mad Max Saga",
+      "video": false,
+      "vote_average": 7.62,
+      "vote_count": 919
+    },
+    {
+      "id": "786892",
+      "adult": false,
+      "backdrop_path": "/raph7qjAGTMXaIjVxt6ZDSXRzUr.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "original_language": "en",
+      "original_title": "Furiosa: A Mad Max Saga",
+      "overview": "As the world fell, young Furiosa is snatched from the Green Place of Many Mothers and falls into the hands of a great Biker Horde led by the Warlord Dementus. Sweeping through the Wasteland they come across the Citadel presided over by The Immortan Joe. While the two Tyrants war for dominance, Furiosa must survive many trials as she puts together the means to find her way home.",
+      "popularity": 757.234,
+      "poster_path": "/iADOJ8Zymht2JPMoy3R7xceZprc.jpg",
+      "release_date": "2024-05-22",
+      "title": "Furiosa: A Mad Max Saga",
+      "video": false,
+      "vote_average": 7.62,
+      "vote_count": 919
+    },
+    {
+      "id": "786892",
+      "adult": false,
+      "backdrop_path": "/raph7qjAGTMXaIjVxt6ZDSXRzUr.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "original_language": "en",
+      "original_title": "Furiosa: A Mad Max Saga",
+      "overview": "As the world fell, young Furiosa is snatched from the Green Place of Many Mothers and falls into the hands of a great Biker Horde led by the Warlord Dementus. Sweeping through the Wasteland they come across the Citadel presided over by The Immortan Joe. While the two Tyrants war for dominance, Furiosa must survive many trials as she puts together the means to find her way home.",
+      "popularity": 757.234,
+      "poster_path": "/iADOJ8Zymht2JPMoy3R7xceZprc.jpg",
+      "release_date": "2024-05-22",
+      "title": "Furiosa: A Mad Max Saga",
+      "video": false,
+      "vote_average": 7.62,
+      "vote_count": 919
+    }
+  ]
 }
