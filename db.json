@@ -40,23 +40,43 @@
       "vote_count": 1175
     },
     {
-      "id": 746036,
+      "id": 1001311,
       "adult": false,
-      "backdrop_path": "/H5HjE7Xb9N09rbWn1zBfxgI8uz.jpg",
+      "backdrop_path": "/hliXekHv7xc2cgXnMBLlp4Eihq8.jpg",
       "genre_ids": [
+        53,
+        27,
         28,
-        35
+        9648
+      ],
+      "original_language": "fr",
+      "original_title": "Sous la Seine",
+      "overview": "In the Summer of 2024, Paris is hosting the World Triathlon Championships on the Seine for the first time. Sophia, a brilliant scientist, learns from Mika, a young environmental activist, that a large shark is swimming deep in the river. To avoid a bloodbath at the heart of the city, they have no choice but to join forces with Adil, the Seine river police commander.",
+      "popularity": 2822.686,
+      "poster_path": "/qZPLK5ktRKa3CL4sKRZtj8UlPYc.jpg",
+      "release_date": "2024-06-05",
+      "title": "Under Paris",
+      "video": false,
+      "vote_average": 5.82,
+      "vote_count": 520
+    },
+    {
+      "id": 1136318,
+      "adult": false,
+      "backdrop_path": "/11G6N5zW0KykVS0EcNKeXHUmQj8.jpg",
+      "genre_ids": [
+        10752
       ],
       "original_language": "en",
-      "original_title": "The Fall Guy",
-      "overview": "Fresh off an almost career-ending accident, stuntman Colt Seavers has to track down a missing movie star, solve a conspiracy and try to win back the love of his life while still doing his day job.",
-      "popularity": 880.671,
-      "poster_path": "/aBkqu7EddWK7qmY4grL4I6edx2h.jpg",
-      "release_date": "2024-04-24",
-      "title": "The Fall Guy",
+      "original_title": "Battle Over Britain",
+      "overview": "A young pilot, fresh out of training, is called to join a Flight while they wait for the call to scramble. Throughout a single day, he witnesses the skies of southern England filled with deadly dog fights, and after every exhausting battle the men return to their dispersal hut, only to find another of their number missing. Unwilling to surrender, the pilot and his comrades unite to take to the skies once more, determined to defend not only the airfield, but their entire country.",
+      "popularity": 799.489,
+      "poster_path": "/8htJ7keZTwa08aC9OKyiqaq1cNJ.jpg",
+      "release_date": "2023-12-01",
+      "title": "Battle Over Britain",
       "video": false,
-      "vote_average": 7.286,
-      "vote_count": 1175
+      "vote_average": 6.517,
+      "vote_count": 30
     }
   ]
 }

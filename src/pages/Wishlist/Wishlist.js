@@ -21,6 +21,17 @@ function Wishlist() {
     }
   };
 
+  const handleClick = async (id) => {
+     try {
+      // await axios.delete(`http://localhost:3001/wishlist/${id}`);
+      // Update state to remove the deleted movie
+      setSavedMovie(savedMovie.filter(movie => movie.id !== id));
+    } catch (error) {
+      console.error("Error deleting movie:", error);
+    }
+  };
+
+
   return (
     <div className="wishlist-container">
       {savedMovie.map((movie) => (
@@ -31,6 +42,7 @@ function Wishlist() {
             alt="movie poster"
           />
           <div className="card__overlay">
+            <button onClick={() => handleClick(movie.id)}>Remove</button>
             <div
               className="card__title"
               style={{ color: "white", fontSize: "20px", fontWeight: "bold" }}
