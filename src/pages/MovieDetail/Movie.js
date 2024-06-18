@@ -6,12 +6,10 @@ import axios from "axios";
 const Movie = () => {
   const [currentMovieDetail, setMovie] = useState([]);
   const { id } = useParams();
-
   useEffect(() => {
     getData();
     window.scrollTo(0, 0);
   }, []);
-
   const getData = async () => {
     try {
       const response = await axios.get(
@@ -22,7 +20,6 @@ const Movie = () => {
       console.error("Error fetching data: ", error);
     }
   };
-
   return (
     <div className="movie" key={id}>
       <div className="movie__intro">

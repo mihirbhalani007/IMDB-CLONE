@@ -1,21 +1,29 @@
 import React, { useContext, useEffect, useState } from "react";
 import { MovieContext } from "../../App";
 import "./Wishlist.css";
+import axios from "axios";
 
 function Wishlist() {
-  const { whishlistMovie } = useContext(MovieContext);
-  const [movieDetails, setMovieDetails] = useState([]);
+  const { wishlistMovie } = useContext(MovieContext);
+  const [savedMovie, setSavedMovie] = useState([]);
 
   useEffect(() => {
-    // Assume movieDetails come from the whishlistMovie array directly
-    setMovieDetails(whishlistMovie);
-  }, [whishlistMovie]);
+    fetchMovies();
+  }, [wishlistMovie]);
 
-  console.log(movieDetails);
+  const fetchMovies = async () => {
+    try {
+      const response = await axios.get("http://localhost:3001/wishlist");
+      setSavedMovie(response.data);
+      console.log("Fetched data:", response.data);
+    } catch (error) {
+      console.error("Error fetching movies:", error);
+    }
+  };
 
   return (
     <div className="wishlist-container">
-      {movieDetails.map((movie) => (
+      {savedMovie.map((movie) => (
         <div className="cards" key={movie.id}>
           <img
             className="card__img"

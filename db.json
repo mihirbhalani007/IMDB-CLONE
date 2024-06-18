@@ -1,0 +1,62 @@
+{
+  "wishlist": [
+    {
+      "id": 929590,
+      "adult": false,
+      "backdrop_path": "/z121dSTR7PY9KxKuvwiIFSYW8cf.jpg",
+      "genre_ids": [
+        10752,
+        28,
+        18
+      ],
+      "original_language": "en",
+      "original_title": "Civil War",
+      "overview": "In the near future, a group of war journalists attempt to survive while reporting the truth as the United States stands on the brink of civil war.",
+      "popularity": 1569.076,
+      "poster_path": "/sh7Rg8Er3tFcN9BpKIPOMvALgZd.jpg",
+      "release_date": "2024-04-10",
+      "title": "Civil War",
+      "video": false,
+      "vote_average": 7.01,
+      "vote_count": 1476
+    },
+    {
+      "id": 746036,
+      "adult": false,
+      "backdrop_path": "/H5HjE7Xb9N09rbWn1zBfxgI8uz.jpg",
+      "genre_ids": [
+        28,
+        35
+      ],
+      "original_language": "en",
+      "original_title": "The Fall Guy",
+      "overview": "Fresh off an almost career-ending accident, stuntman Colt Seavers has to track down a missing movie star, solve a conspiracy and try to win back the love of his life while still doing his day job.",
+      "popularity": 880.671,
+      "poster_path": "/aBkqu7EddWK7qmY4grL4I6edx2h.jpg",
+      "release_date": "2024-04-24",
+      "title": "The Fall Guy",
+      "video": false,
+      "vote_average": 7.286,
+      "vote_count": 1175
+    },
+    {
+      "id": 746036,
+      "adult": false,
+      "backdrop_path": "/H5HjE7Xb9N09rbWn1zBfxgI8uz.jpg",
+      "genre_ids": [
+        28,
+        35
+      ],
+      "original_language": "en",
+      "original_title": "The Fall Guy",
+      "overview": "Fresh off an almost career-ending accident, stuntman Colt Seavers has to track down a missing movie star, solve a conspiracy and try to win back the love of his life while still doing his day job.",
+      "popularity": 880.671,
+      "poster_path": "/aBkqu7EddWK7qmY4grL4I6edx2h.jpg",
+      "release_date": "2024-04-24",
+      "title": "The Fall Guy",
+      "video": false,
+      "vote_average": 7.286,
+      "vote_count": 1175
+    }
+  ]
+}

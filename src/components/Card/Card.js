@@ -16,14 +16,12 @@ const Card = ({ movie }) => {
       setIsLoding(false);
     });
   }, []);
-
   const handleClick = (e) => {
     addToWishlist(movie);
     e.stopPropagation();
     setIsClicked(true);
     setTimeout(() => setIsClicked(false), 600);
   };
-
   const handleCardClick = () => {
     navigate(`/movie/${movie.id}`);
   };
