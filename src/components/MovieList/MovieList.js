@@ -17,6 +17,7 @@ function MovieList() {
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
+    console.log("type : ", type);
   };
 
   const handleFilter = (e) => {
@@ -30,6 +31,7 @@ function MovieList() {
           type ? type : "popular"
         }?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`
       );
+
       if (Data.data && Data.data.results) {
         setMovieList(Data.data.results);
       } else {
@@ -73,45 +75,50 @@ function MovieList() {
 
   return (
     <div className="movie__list">
-      <div className="controls flex justify-center items-center space-x-4 p-4">
-        <input
-          type="text"
-          placeholder="Search movie here..."
-          className="p-2 w-full max-w-xs bg-gray-800 text-white placeholder-gray-400 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all"
-          onChange={handleSearch}
-          value={searchTerm}
-        />
-        <select
-          value={sortOption}
-          onChange={handleSort}
-          className="p-2 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all"
-        >
-          <option value="">Sort By</option>
-          <option value="title">Title</option>
-          <option value="release_date">Release Date</option>
-          <option value="rating">Rating</option>
-        </select>
-        <select
-          value={filterOption}
-          onChange={handleFilter}
-          className="p-2 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all"
-        >
-          <option value="">Filter By</option>
-          <option value="878">Science Fiction</option>
-          <option value="28">Action</option>
-          <option value="12">Adventure</option>
-          <option value="10752">War</option>
-          <option value="18">Drama</option>
-          <option value="80">Crime</option>
-          <option value="53">Thriller</option>
-          <option value="27">Horror</option>
-          <option value="35">Comedy</option>
-          <option value="16">Animation</option>
-          <option value="10751">Family</option>
-          <option value="9648">Mystery</option>
-          <option value="14">Fantasy</option>
-        </select>
-      </div>
+      {type !== undefined ? (
+        <div className="controls flex justify-center items-center space-x-4 p-4">
+          <input
+            type="text"
+            placeholder="Search movie here..."
+            className="p-2 w-full max-w-xs bg-gray-800 text-white placeholder-gray-400 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all"
+            onChange={handleSearch}
+            value={searchTerm}
+          />
+          <select
+            value={sortOption}
+            onChange={handleSort}
+            className="p-2 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all"
+          >
+            <option value="">Sort By</option>
+            <option value="title">Title</option>
+            <option value="release_date">Release Date</option>
+            <option value="rating">Rating</option>
+          </select>
+          <select
+            value={filterOption}
+            onChange={handleFilter}
+            className="p-2 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all"
+          >
+            <option value="">Filter By</option>
+            <option value="878">Science Fiction</option>
+            <option value="28">Action</option>
+            <option value="12">Adventure</option>
+            <option value="10752">War</option>
+            <option value="18">Drama</option>
+            <option value="80">Crime</option>
+            <option value="53">Thriller</option>
+            <option value="27">Horror</option>
+            <option value="35">Comedy</option>
+            <option value="16">Animation</option>
+            <option value="10751">Family</option>
+            <option value="9648">Mystery</option>
+            <option value="14">Fantasy</option>
+          </select>
+        </div>
+      ) : (
+        ""
+      )}
+
       <h2 className="list__title">{(type ? type : "POPULAR").toUpperCase()}</h2>
       <div className="list__cards">
         {filteredAndSortedMovies.length > 0 ? (

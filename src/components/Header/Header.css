@@ -17,7 +17,6 @@
 }
 
 .wishlist {
-
 }
 a > span {
   margin: 0 30px;
@@ -25,12 +24,6 @@ a > span {
   cursor: pointer;
   color: white;
   transition: color 1s;
-}
-
-a > span:hover {
-  color: rgb(255, 0, 0);
-  font-size: 1.4rem;
-
 }
 
 .header__icon {
@@ -42,7 +35,26 @@ a > span:hover {
   font-size: 2rem;
 }
 
-
 .icon {
   margin-left: 5px;
+}
+
+.popular:hover {
+  color: #ffd43b;
+  font-size: 1.2rem;
+}
+
+.topRated:hover {
+  color: #4169e1;
+  font-size: 1.2rem;
+}
+
+.upcoming:hover {
+  color: #ffa500;
+  font-size: 1.2rem;
+}
+
+.wishlist:hover {
+  color: #008000;
+  font-size: 1.2rem;
 }

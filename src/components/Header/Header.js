@@ -1,6 +1,10 @@
 import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFire, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faStarHalfStroke } from "@fortawesome/free-regular-svg-icons";
+import { faCalendarXmark } from "@fortawesome/free-regular-svg-icons";
 
 const Header = () => {
   return (
@@ -14,26 +18,44 @@ const Header = () => {
           />
         </Link>
         <Link to="/movies/popular" style={{ textDecoration: "none" }}>
-          <span>
-            Popular
-            <span className="icon">
-              <i className="fas fa-fire" style={{ color: "yellow" }} />
+          <span className="popular">
+            Trending{" "}
+            <span>
+              <FontAwesomeIcon icon={faFire} style={{ color: "#FFD43B" }} />
             </span>
           </span>
         </Link>
         <Link to="/movies/top_rated" style={{ textDecoration: "none" }}>
-          <span>Top Rated</span>
-            <span className="icon">
-              <i className="fas fa-star-half-stroke" style={{ color: "yellow" }} />
+          <span className="topRated">
+            Highest Rated{" "}
+            <span>
+              <FontAwesomeIcon
+                icon={faStarHalfStroke}
+                style={{ color: "#4169e1" }}
+              />
             </span>
+          </span>
         </Link>
         <Link to="/movies/upcoming" style={{ textDecoration: "none" }}>
-          <span>Upcoming</span>
+          <span className="upcoming">
+            Coming Soon{" "}
+            <span>
+              <FontAwesomeIcon
+                icon={faCalendarXmark}
+                style={{ color: "#ffa500" }}
+              />
+            </span>
+          </span>
         </Link>
       </div>
       <div className="headerRight">
         <Link to="/Wishlist" style={{ textDecoration: "none" }}>
-          <span className="wishlist">Wishlist</span>
+          <span className="wishlist">
+            Wishlist{" "}
+            <span>
+              <FontAwesomeIcon icon={faHeart} style={{ color: "#008000" }} />
+            </span>
+          </span>
         </Link>
       </div>
     </div>

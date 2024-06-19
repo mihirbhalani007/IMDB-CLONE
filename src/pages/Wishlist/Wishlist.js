@@ -2,10 +2,14 @@ import React, { useContext, useEffect } from "react";
 import { MovieContext } from "../../App";
 import "./Wishlist.css";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 function Wishlist() {
   const { deleteFromWishlist, savedMovie, setSavedMovie } =
     useContext(MovieContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchMovies();
@@ -21,21 +25,42 @@ function Wishlist() {
     }
   };
 
-  const handleClick = async (id) => {
+  const handleClick = async (e, id) => {
+    e.stopPropagation();
     deleteFromWishlist(id);
   };
+
+  // const handleCardClick = () => {
+  //   navigate(`/movie/${movie.id}`);
+  // };
 
   return (
     <div className="wishlist-container">
       {savedMovie.map((movie) => (
-        <div className="cards" key={movie.id}>
+        <div
+          className="cards"
+          key={movie.id}
+          onClick={() => {
+            navigate(`/movie/${movie.id}`);
+          }}
+        >
           <img
             className="card__img"
             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
             alt="movie poster"
           />
           <div className="card__overlay">
-            <button onClick={() => handleClick(movie.id)}>Remove</button>
+            <button
+              onClick={(e) => handleClick(e, movie.id)}
+              className="removeButton"
+            >
+              <span>
+                <FontAwesomeIcon
+                  icon={faCircleXmark}
+                  style={{ color: "#f00505" }}
+                />
+              </span>
+            </button>
             <div
               className="card__title"
               style={{ color: "white", fontSize: "20px", fontWeight: "bold" }}

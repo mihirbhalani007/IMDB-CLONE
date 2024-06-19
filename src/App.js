@@ -34,15 +34,25 @@ function App() {
 
     console.log("Adding movie to wishlist:", movieWithStringId); // Debug statement
 
-    // Update the state
-    setSavedMovie((prevMovies) => {
-      if (savedMovie.some((m) => m.id === movieWithStringId.id)) {
-        return prevMovies;
-      }
-      return [...prevMovies, movieWithStringId];
-    });
+    // Check if the movie with the same ID already exists in the wishlist
+    if (savedMovie.some((m) => m.id === movieWithStringId.id)) {
+      // Notify user or handle case where movie is already in wishlist
+      toast.warn("This movie is already in your wishlist!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      return;
+    }
 
-    // Send the POST request
+    // Update the state to add the movie
+    setSavedMovie((prevMovies) => [...prevMovies, movieWithStringId]);
+
+    // Send the POST request to save movie in backend
     axios
       .post("http://localhost:3001/wishlist", movieWithStringId)
       .then(() => {
