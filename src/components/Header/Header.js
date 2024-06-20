@@ -1,12 +1,15 @@
-import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFire, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faStarHalfStroke } from "@fortawesome/free-regular-svg-icons";
 import { faCalendarXmark } from "@fortawesome/free-regular-svg-icons";
+import { MovieContext } from "../../App";
+import { useContext } from "react";
 
 const Header = () => {
+  const { badge } = useContext(MovieContext);
+
   return (
     <div className="header">
       <div className="headerLeft">
@@ -52,9 +55,12 @@ const Header = () => {
         <Link to="/Wishlist" style={{ textDecoration: "none" }}>
           <span className="wishlist">
             Wishlist{" "}
-            <span>
-              <FontAwesomeIcon icon={faHeart} style={{ color: "#008000" }} />
+            <span className="badge">
+              {badge > 0 && <span className="badge">{badge}</span>}
             </span>
+            {/* <span>
+              <FontAwesomeIcon icon={faHeart} style={{ color: "#008000" }} />
+            </span> */}
           </span>
         </Link>
       </div>

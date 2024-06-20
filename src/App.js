@@ -9,12 +9,14 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
 export const MovieContext = React.createContext();
 
 function App() {
   // const [wishlistMovie, setWishlistMovie] = useState([]);
   const [savedMovie, setSavedMovie] = useState([]);
+  const [badge, setBadge] = useState(0);
 
   const notify = () =>
     toast.success("Movie Successfully added!!", {
@@ -57,6 +59,7 @@ function App() {
       .post("http://localhost:3001/wishlist", movieWithStringId)
       .then(() => {
         notify();
+        setBadge(badge + 1);
       })
       .catch((error) => {
         console.error("Error adding movie to wishlist:", error);
@@ -68,6 +71,7 @@ function App() {
       await axios.delete(`http://localhost:3001/wishlist/${id}`);
       // Update state to remove the deleted movie
       setSavedMovie(savedMovie.filter((movie) => movie.id !== id));
+      setBadge(badge - 1);
     } catch (error) {
       console.error("Error deleting movie:", error);
     }
@@ -76,26 +80,27 @@ function App() {
   return (
     <>
       <div className="App">
-        <Router>
-          <Header />
-          <MovieContext.Provider
-            value={{
-              addToWishlist,
-              deleteFromWishlist,
-              savedMovie,
-              setSavedMovie,
-            }}
-          >
+        <MovieContext.Provider
+          value={{
+            addToWishlist,
+            deleteFromWishlist,
+            savedMovie,
+            setSavedMovie,
+            badge,
+          }}
+        >
+          <Router>
+            <Header />
             <Routes>
               <Route index element={<Home />} />
               <Route path="movie/:id" element={<Movie />} />
               <Route path="movies/:type" element={<MovieList />} />
-              <Route path="*" element={<h1>Error Page</h1>} />
+              <Route path="*" element={<ErrorPage />} />
               <Route path="/wishlist" element={<Wishlist />} />
             </Routes>
             <ToastContainer />
-          </MovieContext.Provider>
-        </Router>
+          </Router>
+        </MovieContext.Provider>
       </div>
     </>
   );
