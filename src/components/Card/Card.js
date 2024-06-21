@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "./Card.css";
 import { useNavigate } from "react-router-dom";
-import { MovieContext } from "../../App";
+import { MovieContext } from "../../context/MovieContext";
 
 const Card = ({ movie }) => {
   const { addToWishlist } = useContext(MovieContext);

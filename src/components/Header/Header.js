@@ -1,10 +1,10 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFire, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faFire } from "@fortawesome/free-solid-svg-icons";
 import { faStarHalfStroke } from "@fortawesome/free-regular-svg-icons";
 import { faCalendarXmark } from "@fortawesome/free-regular-svg-icons";
-import { MovieContext } from "../../App";
+import { MovieContext } from "../../context/MovieContext";
 import { useContext } from "react";
 
 const Header = () => {

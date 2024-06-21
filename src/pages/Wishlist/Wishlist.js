@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { MovieContext } from "../../App";
+import { MovieContext } from "../../context/MovieContext";
 import "./Wishlist.css";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
