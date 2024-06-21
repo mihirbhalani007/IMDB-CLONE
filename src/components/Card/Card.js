@@ -6,28 +6,33 @@ import { MovieContext } from "../../context/MovieContext";
 
 const Card = ({ movie }) => {
   const { addToWishlist } = useContext(MovieContext);
-  const [isLoding, setIsLoding] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [isClicked, setIsClicked] = useState(false);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoding(false);
-    });
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000); // Adjust the delay based on expected loading time
+
+    return () => clearTimeout(timer); // Clean up function for timeout
   }, []);
+
   const handleClick = (e) => {
     addToWishlist(movie);
     e.stopPropagation();
     setIsClicked(true);
     setTimeout(() => setIsClicked(false), 600);
   };
+
   const handleCardClick = () => {
     navigate(`/movie/${movie.id}`);
   };
+
   return (
     <>
-      {isLoding ? (
+      {isLoading ? (
         <div className="cards">
           <SkeletonTheme color="#202020" highlightColor="#444">
             <Skeleton height={300} duration={2} />
@@ -41,10 +46,13 @@ const Card = ({ movie }) => {
         >
           <img
             className="card__img"
-            src={`https://image.tmdb.org/t/p/original${
-              movie ? movie.poster_path : ""
-            }`}
-            alt="movie poster"
+            src={
+              movie && movie.poster_path
+                ? `https://image.tmdb.org/t/p/original${movie.poster_path}`
+                : "https://via.placeholder.com/300x450?text=Poster+Not+Available"
+            }
+            loading="lazy"
+            alt={movie ? movie.original_title : "Movie Poster"}
           />
           <div className="card__overlay">
             <div className="card__title">
@@ -68,6 +76,7 @@ const Card = ({ movie }) => {
               }`}
               type="button"
               onClick={handleClick}
+              aria-label="Add to Wishlist"
             >
               <i className="fas fa-heart heart-icon"></i>
             </button>

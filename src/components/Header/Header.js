@@ -1,70 +1,64 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFire } from "@fortawesome/free-solid-svg-icons";
-import { faStarHalfStroke } from "@fortawesome/free-regular-svg-icons";
-import { faCalendarXmark } from "@fortawesome/free-regular-svg-icons";
-import { MovieContext } from "../../context/MovieContext";
+import {
+  faFire,
+  faStarHalfStroke,
+  faCalendarXmark,
+} from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
+import { MovieContext } from "../../context/MovieContext";
 
 const Header = () => {
   const { badge } = useContext(MovieContext);
 
   return (
-    <div className="header">
+    <header className="header">
       <div className="headerLeft">
         <Link to="/">
           <img
             className="header__icon"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png"
-            alt="Imdb logo"
+            alt="IMDb logo"
           />
         </Link>
-        <Link to="/movies/popular" style={{ textDecoration: "none" }}>
+        <Link to="/movies/popular" className="header__link">
           <span className="popular">
-            Trending{" "}
-            <span>
-              <FontAwesomeIcon icon={faFire} style={{ color: "#FFD43B" }} />
-            </span>
+            Trending
+            <FontAwesomeIcon
+              icon={faFire}
+              style={{ color: "#FFD43B", marginLeft: "5px" }}
+            />
           </span>
         </Link>
-        <Link to="/movies/top_rated" style={{ textDecoration: "none" }}>
+        <Link to="/movies/top_rated" className="header__link">
           <span className="topRated">
-            Highest Rated{" "}
-            <span>
-              <FontAwesomeIcon
-                icon={faStarHalfStroke}
-                style={{ color: "#4169e1" }}
-              />
-            </span>
+            Highest Rated
+            <FontAwesomeIcon
+              icon={faStarHalfStroke}
+              style={{ color: "#4169e1", marginLeft: "5px" }}
+            />
           </span>
         </Link>
-        <Link to="/movies/upcoming" style={{ textDecoration: "none" }}>
+        <Link to="/movies/upcoming" className="header__link">
           <span className="upcoming">
-            Coming Soon{" "}
-            <span>
-              <FontAwesomeIcon
-                icon={faCalendarXmark}
-                style={{ color: "#ffa500" }}
-              />
-            </span>
+            Coming Soon
+            <FontAwesomeIcon
+              icon={faCalendarXmark}
+              style={{ color: "#ffa500", marginLeft: "5px" }}
+            />
           </span>
         </Link>
       </div>
       <div className="headerRight">
-        <Link to="/Wishlist" style={{ textDecoration: "none" }}>
+        <Link to="/wishlist" className="header__link">
           <span className="wishlist">
-            Wishlist{" "}
-            <span className="badge">
-              {badge > 0 && <span className="badge">{badge}</span>}
-            </span>
-            {/* <span>
-              <FontAwesomeIcon icon={faHeart} style={{ color: "#008000" }} />
-            </span> */}
+            Wishlist
+            {badge > 0 && <span className="badge">{badge}</span>}
           </span>
         </Link>
       </div>
-    </div>
+    </header>
   );
 };
 

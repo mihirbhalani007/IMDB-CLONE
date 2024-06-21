@@ -8,12 +8,19 @@ import Movielist from "../../components/MovieList/MovieList";
 
 function Home() {
   const [popularMovies, setPopularMovies] = useState([]);
+  const [error, setError] = useState(null);
 
+  // Fetch popular movies from the API
   const fetchPopularMovies = async () => {
-    const response = await axios.get(
-      "https://api.themoviedb.org/3/movie/popular?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US"
-    );
-    setPopularMovies(response.data.results);
+    try {
+      const response = await axios.get(
+        "https://api.themoviedb.org/3/movie/popular?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US"
+      );
+      setPopularMovies(response.data.results);
+    } catch (err) {
+      setError("Failed to fetch popular movies");
+      console.error(err);
+    }
   };
 
   useEffect(() => {
@@ -21,8 +28,9 @@ function Home() {
   }, []);
 
   return (
-    <>
-      <div className="poster">
+    <div className="poster">
+      {error && <div className="error">{error}</div>}
+      {popularMovies.length > 0 ? (
         <Carousel
           showThumbs={false}
           autoPlay={true}
@@ -41,30 +49,28 @@ function Home() {
               <div className="posterImage">
                 <img
                   src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
-                  alt="Poster Img"
+                  alt={`${movie.original_title} Poster`}
                 />
               </div>
               <div className="posterImage__overlay">
-                <div className="posterImage__title">
-                  {movie ? movie.original_title : ""}
-                </div>
+                <div className="posterImage__title">{movie.original_title}</div>
                 <div className="posterImage__runtime">
-                  {movie ? movie.release_date : ""}
+                  {movie.release_date}
                   <span className="posterImage__rating">
-                    {movie ? movie.vote_average.toFixed(1) : ""}
+                    {movie.vote_average.toFixed(1)}
                     <i className="fas fa-star" style={{ color: "yellow" }} />
                   </span>
                 </div>
-                <div className="posterImage__description">
-                  {movie ? movie.overview : ""}
-                </div>
+                <div className="posterImage__description">{movie.overview}</div>
               </div>
             </Link>
           ))}
         </Carousel>
-        <Movielist />
-      </div>
-    </>
+      ) : (
+        !error && <div className="loading">Loading...</div>
+      )}
+      <Movielist />
+    </div>
   );
 }
 
