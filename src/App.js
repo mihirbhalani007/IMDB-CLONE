@@ -5,7 +5,7 @@ import Home from "./pages/Home/Home";
 import MovieList from "./components/MovieList/MovieList";
 import Movie from "./pages/MovieDetail/Movie";
 import Wishlist from "./pages/Wishlist/Wishlist";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
@@ -30,12 +30,17 @@ function App() {
       theme: "colored",
     });
 
+  const handleBadge = async () => {
+    const response = await axios.get("http://localhost:3001/wishlist");
+    setBadge(response.data.length);
+  };
+  useEffect(() => {
+    handleBadge();
+  }, [savedMovie]);
+
   const addToWishlist = (movie) => {
     // Convert the id to a string
     const movieWithStringId = { ...movie, id: String(movie.id) };
-
-    console.log("Adding movie to wishlist:", movieWithStringId); // Debug statement
-
     // Check if the movie with the same ID already exists in the wishlist
     if (savedMovie.some((m) => m.id === movieWithStringId.id)) {
       // Notify user or handle case where movie is already in wishlist
@@ -59,7 +64,7 @@ function App() {
       .post("http://localhost:3001/wishlist", movieWithStringId)
       .then(() => {
         notify();
-        setBadge(badge + 1);
+        handleBadge();
       })
       .catch((error) => {
         console.error("Error adding movie to wishlist:", error);
@@ -71,7 +76,7 @@ function App() {
       await axios.delete(`http://localhost:3001/wishlist/${id}`);
       // Update state to remove the deleted movie
       setSavedMovie(savedMovie.filter((movie) => movie.id !== id));
-      setBadge(badge - 1);
+      handleBadge();
     } catch (error) {
       console.error("Error deleting movie:", error);
     }

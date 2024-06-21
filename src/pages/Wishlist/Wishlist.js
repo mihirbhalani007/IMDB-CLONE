@@ -19,7 +19,6 @@ function Wishlist() {
     try {
       const response = await axios.get("http://localhost:3001/wishlist");
       setSavedMovie(response.data);
-      console.log("Fetched data:", response.data);
     } catch (error) {
       console.error("Error fetching movies:", error);
     }
